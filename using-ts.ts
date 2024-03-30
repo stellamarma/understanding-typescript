@@ -20,7 +20,13 @@ let combineValues:(a:number, b:number)=>number;//its function parameter
 combineValues=add;
 
 console.log(combineValues(8,8));
-
+function addAndHandle(n1:number,n2:number,cd: (num:number)=>void){
+    const result=n1+n2;
+    cd(result);
+}
 //printResult(add(5,12));
+addAndHandle(10,20,(result)=>{
+    console.log(result);
+});
 const combinadAges= combine(30,30,'as_number');
 console.log(combinadAges);
