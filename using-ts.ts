@@ -1,14 +1,16 @@
 
-function add(num1: number,num2: number, showResult: boolean){
-    if(showResult){
-        console.log(num1+num2);
-    }else{
-        return num1 + num2;
-    }
-        
-}
-const number1=5;
-const number2=2.8;
-showResult0=true;
+const person ={
+    name: 'maxmal',
+    age: 30,
+    hobbies:[ 'Sport','Cooking']
 
-add(number1, number2,showResult0);
+
+};
+
+let favoriteActivities: string[];
+favoriteActivities= ['Sport'];
+
+console.log(person.name);
+for(const hoddy of person.hobbies){
+    console.log(hobby.toUpperCase());
+}
