@@ -30,3 +30,13 @@ addAndHandle(10,20,(result)=>{
 });
 const combinadAges= combine(30,30,'as_number');
 console.log(combinadAges);
+
+let userInput: unknown;
+let userName: string;
+
+userInput=5;
+userInput='max';
+
+if(typeof userInput ==='string'){
+    userName=userInput;
+}
