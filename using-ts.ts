@@ -14,7 +14,7 @@ const person ={
 };
 person.role.push('admin');
 //person.role[1]=10; its wrong
-let favoriteActivities: string[];
-favoriteActivities= ['Sport'];
+let favoriteActivities: any[];//any array . i can put whatever i want inside
+favoriteActivities= ['Sport',5 ];
 
 console.log(person.name);
