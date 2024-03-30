@@ -1,4 +1,7 @@
-function combine(n1: number|string ,n2: number|string, resultman: 'as_number'|'as_string'){
+type Combinable=number |string;
+
+
+function combine(n1: Combinable ,n2: Combinable, resultman: 'as_number'|'as_string'){
     let result;
     if(typeof n1==='number'&& typeof n2==='number'){
         
