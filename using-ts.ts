@@ -12,5 +12,9 @@ function combine(n1: Combinable ,n2: Combinable, resultman: 'as_number'|'as_stri
     }
     return result;
 }
+function printResult(num:number):void{
+    console.log('Result'+num);
+}
+printResult(add(5,12));
 const combinadAges= combine(30,30,'as_number');
 console.log(combinadAges);
