@@ -1,3 +1,3 @@
-const userName='Max';
 
-console.log(userName);
+
+console.log('Sending..');
