@@ -10,9 +10,21 @@ if (age>20){
     var isOld=true;
 }
 
-console.log(isOld);
-const add =(a:number,b:number)=>a+b;
+
+const add =(a:number,b:number=1)=>a+b;
 console.log(add(2,5));
 
 const printOutput=(output:string|number)=>console.log(output);
-printOutput(add(2,5));
+printOutput(add(2));
+
+const hobbies =[ 'sport', 'cooking'];
+const activeHobbies=['hiking'];
+
+activeHobbies.push(...hobbies);
+
+const person={
+    name:'Max',
+    age:30
+};
+
+const copiedPerson={...person};
