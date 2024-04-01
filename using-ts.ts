@@ -11,8 +11,14 @@ if (age>20){
 }
 
 
-const add =(a:number,b:number=1)=>a+b;
-console.log(add(2,5));
+const add =(...numbers:number[])=>{
+    return numbers.reduce((curResult,curValue)=>{
+        return curResult+curValue;
+    },0);
+   
+};
+const addNumbers=add(2,5,2,3);
+console.log(addNumbers);
 
 const printOutput=(output:string|number)=>console.log(output);
 printOutput(add(2));
