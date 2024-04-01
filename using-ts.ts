@@ -34,3 +34,11 @@ const person={
 };
 
 const copiedPerson={...person};
+
+const hoddy1= hobbies[0];
+const hoddy2= hobbies[1];
+const [hpbby1, hobby2,...remain ]=hobbies;
+console.log(hobbies)
+
+const { name:firstname , age }= person;
+console.log(firstname , age);
