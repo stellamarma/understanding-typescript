@@ -1,6 +1,6 @@
 class Department{
     private employees:string[]=[];
-    constructor(public name:string, private id:string){
+    constructor(public readonly name:string, private id:string){
        
     }
     describe(this: Department){
