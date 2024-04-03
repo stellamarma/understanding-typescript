@@ -16,7 +16,13 @@ class Department{
 }
 const accounting = new Department('Accounting',"polo");
 
-
+class ItDepartment extends Department{
+    constructor(id:string, public admins:string[]){
+        super(id,'IT');
+        this.admins=admins;
+        
+    }
+}
 
 console.log(accounting);
 
