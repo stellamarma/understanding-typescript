@@ -1,6 +1,6 @@
 type Admin{
     name: string;
-    privileges: string[];
+    privileges: string;
 };
 type Employee{
     name:string;
@@ -11,31 +11,45 @@ type ElevatedEmployee= Admin & Employee;
 
 const e1: ElevatedEmployee={
     name: 'Max',
-    privileges: ['create-server'],
+    privileges: 'create-server',
     startDate:new Date()
 
-};
-type Combinable= string|number;
-type Numeric= number | boolean;
 
+};
+type Combinable= string |number ;
+type Numeric= number|boolean;
 type Universal= Combinable & Numeric;
 
-function add(a:Combinable, b: Numeric){
-    if (typeof a==='string'|| typeof b === 'string'){
-        return a.toString()+ b.toString();
+function add(a:Combinable, b:Combinable ){
+    if(typeof a==='string'|| typeof b=== 'string'){
+        return a.toString()+ b.toString;
     }
     return a+b;
 }
- type UnknownEmployee= Employee|Admin ;
+interface Bird{
+    type:'bird';
+    flyingSpeed:number;
+}
+interface Horse{
+    type:'horse'
+    runningSpeed:number;
+}
+type Animal = Bird| Horse;
 
- function printEmployeeInformation(emp: UnknownEmployee){
-    console.log('Name:' + emp.name);
+function moveAnimal(animal: Animal){
+    let speed;
+    switch(animal.type){
+        case 'bird':
+            speed=animal.flyingSpeed;
+            break;
+        case 'horse':
+            speed=animal.runningSpeed;
+    }
+}
+moveAnimal({type:'bird', flyingSpeed:10});
 
-    if('privaleges' in emp)
-        console.log('Privileges: ' +emp.startDate);//typeGuard
+//const userInputElement =<HTMLInputElement> document.querySelector('user-input')!;
 
- }
+const userInputElement =document.querySelector('user-input')! as HTMLInputElement;
 
- printEmployeeInformation(e1);
-
- class Car  
+userInputElement.value='Hi there';
