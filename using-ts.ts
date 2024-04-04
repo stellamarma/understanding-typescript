@@ -20,12 +20,16 @@ type Combinable= string |number ;
 type Numeric= number|boolean;
 type Universal= Combinable & Numeric;
 
+function add(a:number, b:number):number
 function add(a:Combinable, b:Combinable ){
     if(typeof a==='string'|| typeof b=== 'string'){
         return a.toString()+ b.toString;
     }
     return a+b;
 }
+const result=add('Max','mak')as string;
+result.split(' ');
+/*
 interface Bird{
     type:'bird';
     flyingSpeed:number;
@@ -59,7 +63,8 @@ interface ErrorContainer{
     [prop: string]: string;
 }
 const errorBag:ErrorContainer={
-    email:'Not a valid email'
+    email:'Not a valid email',
     username:'must start with capital'
 
 };
+*/
