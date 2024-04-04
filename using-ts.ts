@@ -21,6 +21,7 @@ type Numeric= number|boolean;
 type Universal= Combinable & Numeric;
 
 function add(a:number, b:number):number
+function add(a:string, b:string):string
 function add(a:Combinable, b:Combinable ){
     if(typeof a==='string'|| typeof b=== 'string'){
         return a.toString()+ b.toString;
@@ -29,6 +30,14 @@ function add(a:Combinable, b:Combinable ){
 }
 const result=add('Max','mak')as string;
 result.split(' ');
+
+const fetcheUserDate={
+    id:'u1',
+    name:'max',
+    job:{ title: 'Ceo', description:'my own company'}
+};
+
+console.log(fetchedUserData?.job?.title );
 /*
 interface Bird{
     type:'bird';
