@@ -38,6 +38,12 @@ const fetcheUserDate={
 };
 
 console.log(fetchedUserData?.job?.title );
+
+const userInput='';
+
+const storedData= userInput ?? 'DEFAULT';
+
+console.log(storedData);
 /*
 interface Bird{
     type:'bird';
