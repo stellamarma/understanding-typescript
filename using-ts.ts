@@ -21,7 +21,7 @@ interface lengthy{
   length:number;  
 }
 
- function countAndPrint<T>(element:T):[T,sting]{
+ function countAndPrint<T>(element:T):[T,string]{
     let descriptionText= 'got no value.';
     if (element.length===1){
         descriptionText='Got 1 element.';
@@ -33,8 +33,38 @@ interface lengthy{
 
  console.log(countAndDescribe('hi there'));
 
- function extractAndConvert< T extends object, Uextends keyof T>(obj:T,key: U){
+ function extractAndConvert< T extends object,U extends keyof T>(obj:T,key: U){
 
     return obj[key];
  }
  extractAndConvert({name: 'max'},'name');
+
+ class DataStorage<T extends string |number |boolean>{
+    private data: T[]=[];
+
+    addItem(item:T){
+        this.data.push(item);
+    }
+
+    removeItem(item:T){
+        if(this.data.indexOf(item)===-1){
+            return;
+        }
+        this.data.splice(this.data.indexOf(item),1);
+    }
+    getItem(){
+        return[...this.data];
+    }
+ }
+ const textStorage= new DataStorage<string>();
+ textStorage.addItem('max');
+ textStorage.addItem('manu');
+ textStorage.removeItem('max');
+ console.log(textStorage.getItem());
+
+ const numberStore=new DataStore<number>();
+ /*
+ const odjStore= new DataStorage<object>();
+ objStorage.addItem({name:'max'});
+ objStorage.addItem({name:'manu'});
+ */ 
