@@ -32,3 +32,9 @@ interface lengthy{
  }
 
  console.log(countAndDescribe('hi there'));
+
+ function extractAndConvert< T extends object, Uextends keyof T>(obj:T,key: U){
+
+    return obj[key];
+ }
+ extractAndConvert({name: 'max'},'name');
